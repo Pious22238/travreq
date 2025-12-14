@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #030b33, #000);
+    color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* 🌟 Sidebar spacing fix */
+
+.main-content {
+    margin-left: 230px;
+    /* Sidebar width */
+    transition: margin-left 0.3s ease;
+    flex: 1;
+    padding: 40px;
+}
+
+
+/* Remove hover behavior – fixed width sidebar */
+
+.sidebar {
+    width: 230px !important;
+}
+
+
+/* 📊 Table Styling */
+
+.table-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(77, 184, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: rgba(77, 184, 255, 0.25);
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+a.btn {
+    background: #4db8ff;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+a.btn:hover {
+    background: #007bff;
+}
+
+
+/* 🌠 Topbar */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.topbar h2 {
+    color: #4db8ff;
+    letter-spacing: 1px;
+}
+
+.topbar a {
+    text-decoration: none;
+    background: #ff4d4d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.topbar a:hover {
+    background: #e60000;
+}
+
+
+/* 🌌 Floating Particles */
+
+.particle {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background: #4db8ff;
+    border-radius: 50%;
+    animation: float 8s infinite ease-in-out;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-80px) scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+}
+
+
+/* 📱 Responsive Layouts */
+
+@media (max-width: 1024px) {
+    .main-content {
+        margin-left: 180px;
+        padding: 25px;
+    }
+    table,
+    th,
+    td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 70px;
+        padding: 20px;
+    }
+    .sidebar {
+        width: 70px !important;
+    }
+    .sidebar ul li a span {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    th,
+    td {
+        padding: 6px;
+        font-size: 12px;
+    }
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

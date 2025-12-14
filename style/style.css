@@ -1,0 +1,180 @@
+/* ===== CORPORATE DARK BLUE & LIGHT BLUE THEME ===== */
+
+:root {
+    --blue-dark: #004C8F;
+    --blue-light: #0A5DAA;
+    --blue-bg: #E8F0FA;
+    --green: #28a745;
+    --red: #C0392B;
+    --gray: #555;
+    --white: #ffffff;
+    --text-dark: #333;
+    --border: #ccc;
+}
+
+
+/* General Page Layout */
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--blue-bg);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+
+/* Heading */
+
+h2 {
+    color: var(--blue-dark);
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+/* Tables */
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    font-size: 15px;
+    text-align: center;
+}
+
+th {
+    background: var(--blue-dark);
+    color: var(--white);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f8faff;
+}
+
+tr:hover {
+    background: #e6f0ff;
+}
+
+
+/* Buttons */
+
+button,
+.btn {
+    padding: 8px 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+/* Button Variants */
+
+.btn {
+    background: linear-gradient(to right, var(--blue-dark), var(--blue-light));
+}
+
+.btn:hover {
+    background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
+}
+
+.approve {
+    background: var(--green);
+}
+
+.approve:hover {
+    background: #1f7a32;
+}
+
+.reject {
+    background: var(--red);
+}
+
+.reject:hover {
+    background: #992D22;
+}
+
+.logout {
+    background: var(--gray);
+}
+
+.logout:hover {
+    background: #333;
+}
+
+
+/* Form & Login Box */
+
+.login-box,
+.form-box {
+    width: 350px;
+    margin: 60px auto;
+    padding: 25px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--blue-dark);
+}
+
+.login-box,
+.form.box {
+    background: rgb(214, 214, 226);
+}
+
+
+/* Inputs */
+
+input,
+select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--blue-dark);
+    outline: none;
+}
+
+
+/* Filter Form */
+
+.filter-form {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* Error Text */
+
+.error {
+    color: var(--red);
+    font-weight: 500;
+}
